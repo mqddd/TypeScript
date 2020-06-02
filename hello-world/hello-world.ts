@@ -1,7 +1,6 @@
 class HelloWorld {
-    static hello() {
-        console.log('Hello, World!');
-
+    static hello(): string {
+        return "Hello, World!";
     }
 }
 
