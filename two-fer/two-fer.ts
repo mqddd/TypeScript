@@ -1,9 +1,6 @@
 class TwoFer {
-  public static twoFer(name?: string): string {
-    if (name)
-      return`One for ${name}, one for me.`;
-    else
-      return 'One for you, one for me.';
+  public static twoFer(name = "you"): string {
+    return`One for ${name}, one for me.`;
   }
 }
 
