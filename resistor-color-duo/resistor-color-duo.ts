@@ -1,21 +1,20 @@
 export class ResistorColor {
-  private color: string[];
-  constructor(color: string[]) {
-    this.color = color;
+  private colors: string[];
+  private firstParm: number;
+  private secondParm: number;
+  private primaryColors: string[] = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
+  constructor(colors: string[]) {
+    this.colors = colors;
   }
-  value = (): number => {
-    let colors: string[] = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
-    let firstParm: number;
-    let secondParm: number;
-    for (let index = 0; index < colors.length; index++) {
-      const element = colors[index];
-      if (this.color[0] === element) {
-        firstParm = index;
+  public value(): number {
+    this.primaryColors.forEach(element => {
+      if (this.colors[0] === element) {
+        firstParm = primaryColors.indexOf(element);
       }
-      if (this.color[1] === element) {
-        secondParm = index;
+      if (this.colors[1] === element) {
+        secondParm = primaryColors.indexOf(element);
       }
-    }
+    });
       return `${firstParm}${secondParm}`;
-  };
+  }
 }
