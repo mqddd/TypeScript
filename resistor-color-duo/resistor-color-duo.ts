@@ -7,12 +7,12 @@ export class ResistorColor {
     this.colors = colors;
   }
   public value(): number {
-    this.primaryColors.forEach(element => {
-      if (this.colors[0] === element) {
-        firstParm = primaryColors.indexOf(element);
+    this.primaryColors.forEach((color: string, index: number) => {
+      if (this.colors[0] === color) {
+        firstParm = index;
       }
-      if (this.colors[1] === element) {
-        secondParm = primaryColors.indexOf(element);
+      if (this.colors[1] === color) {
+        secondParm = index;
       }
     });
       return `${firstParm}${secondParm}`;
