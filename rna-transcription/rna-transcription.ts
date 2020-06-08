@@ -1,17 +1,22 @@
 class Transcriptor {
-    toRna(DNAVals: string[]) {
-      for (let index = 0; index < DNAVals.length; index++) {
-        const element = DNAVals[index];
-        if (element == "G")
-          DNAVals[index] = "C";
-        else if (element == "C")
-          DNAVals[index] = "G";
-        else if (element == "T")
-          DNAVals[index] = "A";
-        else if (element == "A")
-          DNAVals[index] = "U";
-      }
-      return DNAVals;
+
+    public toRna(DnaVals: string[]): string[] {
+      return changeDnaToRna(DnaVals);
+    }
+
+    private changeDnaToRna(DnaVals: string[]): string[] {
+      let RnaVals: string[];
+      DnaVals.forEach((character: string, index: number) => {
+        if (character == "G")
+          RnaVals[index] = "C";
+        else if (character == "C")
+          RnaVals[index] = "G";
+        else if (character == "T")
+          RnaVals[index] = "A";
+        else if (character == "A")
+          RnaVals[index] = "U";
+      });
+      return RnaVals;
     }
 }
 
