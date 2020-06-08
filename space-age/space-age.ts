@@ -7,35 +7,35 @@ class SpaceAge {
     this.ageOnEarth = seconds / 31557600;
   }
 
-  onEarth = (): number => {
+  public onEarth(): number {
     return this.ageOnEarth;
   }
 
-  onMercury = (): number => {
+  public onMercury(): number {
     return this.ageOnEarth / 0.2408467;
   }
 
-  onVenus = (): number => {
+  public onVenus(): number {
     return this.ageOnEarth / 0.61519726;
   }
 
-  onMars = (): number => {
+  public onMars(): number {
     return this.ageOnEarth / 1.8808158;
   }
 
-  onJupiter = (): number => {
+  public onJupiter(): number {
     return this.ageOnEarth / 11.862615;
   }
 
-  onSaturn = (): number => {
+  public onSaturn(): number {
     return this.ageOnEarth / 29.447498;
   }
 
-  onUranus = (): number => {
+  public onUranus(): number {
     return this.ageOnEarth / 84.016846;
   }
 
-  onNeptune = (): number => {
+  public onNeptune(): number {
     return this.ageOnEarth / 164.79132;
   }
 }
