@@ -1,5 +1,5 @@
 class Matrix {
-    constructor( /* Parameters go here */ ) {
+    constructor(matrix: string) {
         // Your code here
     }
 }
