@@ -34,8 +34,8 @@ export default class BinarySearch {
         return true;
     }
 
-    public get array(): boolean | string{
-        return this.isSorted(this._array) ? true : "undefined";
+    public get array(): any[] | undefined{
+        return (this.isSorted(this._array)) ? [] : undefined;
     }
 
 }
